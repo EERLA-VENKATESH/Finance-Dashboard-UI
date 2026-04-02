@@ -1,0 +1,183 @@
+/* 🌐 Global */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f6fa;
+}
+
+/* 📦 Container */
+.container {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* 🧠 Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  color: #333;
+}
+
+/* 📊 Cards */
+.cards {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* 📊 Charts */
+.charts {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.charts div {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* 📌 Section */
+.section {
+  margin-bottom: 20px;
+}
+
+/* 🔍 Filters */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+input, select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* 🔘 Buttons */
+button {
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* ❌ Delete button (second button in row) */
+td button:nth-child(2) {
+  background: #dc3545;
+}
+
+td button:nth-child(2):hover {
+  background: #a71d2a;
+}
+
+/* 📋 Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+th {
+  background: #007bff;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+  background: #f1f1f1;
+}
+
+/* 🌙 DARK MODE */
+.dark {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark h1 {
+  color: white;
+}
+
+.dark .card,
+.dark .charts div,
+.dark table {
+  background: #2c2c2c;
+  color: white;
+}
+
+.dark th {
+  background: #444;
+}
+
+.dark input,
+.dark select {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+.dark tr:hover {
+  background: #333;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .charts {
+    flex-direction: column;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
